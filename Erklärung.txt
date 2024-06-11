@@ -1,0 +1,12 @@
+controller.py = Script für die Steuerung eines Controllers. Die Steuerung funktioniert über den linken Stick. Abbruch mit der "Back" Taste. Funktioniert, wenn der Controller via Kabel, Bluetooth oder Remote mit dem Auto verbunden ist.
+
+garage.py = 1 zu 1 wie controller.py, nur in extrem langsam (auf Wunsch für die Kreativchallenge / Garage.
+
+
+
+Ordner Notfall (wird eigentlich nicht benötigt)
+Die beiden Scripte sind eine Notfalllösung für die Controllersteuerung am Laptop, sollte der Remote Zugriff nicht mehr funktionieren. Der Controller sollte schon vorher am Laptop angeschlossen sein. 
+
+=> controller_sender.py = Dieses Script wird ZUERST auf dem Laptop (welcher über ssh verbunden ist) gestartet. VORHER muss in Zeile 14 die IP (nicht der Port) geändert werden. Dort kommt die Adresse rein, die man auch bei z.b. Putty SSH oder Filezilla benutzt. Dieses Script sendet die benötigten Infos an das controller_receiver Script auf dem Auto.
+
+=> controller_receiver.py = Dieses Script wird z.b. über Putty SSH auf dem Auto NACH dem Ersten gestartet. Nichts verändern. Die Steuerung hat hier eine Verzögerung von 1-2 Sekunden.
